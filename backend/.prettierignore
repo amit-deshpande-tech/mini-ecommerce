@@ -1,0 +1,15 @@
+# Ignore build output
+node_modules/
+dist/
+build/
+coverage/
+
+# Environment files
+.env
+.env.* 
+
+# Log files
+*.log
+
+# Misc
+package-lock.json
