@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema(
             select: false, // don't return password by default
         },
         isAdmin: {
-            type: String,
+            type: Boolean,
             default: false,
         },
         resetPasswordToken: String,

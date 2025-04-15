@@ -4,7 +4,7 @@ import User from '../models/user.models.js';
 const protect = async (req, res, next) => {
     let token;
 
-    if (req.headers.authorization && req.headers.authorization.startsWith('Brearer')) {
+    if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
         try {
             // Getting token from the header
             token = req.headers.authorization.split(' ')[1];
@@ -20,9 +20,9 @@ const protect = async (req, res, next) => {
             return res.status(401).json({ message: 'Not authorized, token failed' });
         }
     }
-
+    console.log(token);
     if (!token) {
-        return res.send(401).json({ message: 'Not authorized, token was failed' });
+        return res.status(401).json({ message: 'Not authorized, token was failed' });
     }
 };
 
