@@ -33,7 +33,7 @@ const orderSchema = new mongoose.Schema(
         paidAt: { type: Date },
         isDelivered: { type: Boolean, default: false },
         deliveredAt: { type: Date },
-        totalPrice: { type: Number, required },
+        totalPrice: { type: Number, required: true },
     },
 
     { timestamps: true }

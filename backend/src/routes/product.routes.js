@@ -1,7 +1,7 @@
 import express from 'express';
 import protect from '../middlewares/auth.middlewares.js';
 import { isAdmin } from '../middlewares/isadmin.middlewares.js';
-import { reviewProduct } from '../controllers/review.controller.js';
+import { reviewProduct } from '../controllers/review.controllers.js';
 import {
     getAllProducts,
     getProdutById,
