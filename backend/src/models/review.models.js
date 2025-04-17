@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import Product from './product.models';
 
 const reviewSchema = new mongoose.Schema(
     {
@@ -10,6 +11,14 @@ const reviewSchema = new mongoose.Schema(
             required: true,
             ref: 'User',
         },
+        product: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: Product,
+        },
     },
     { timestamps: true }
 );
+
+const Review = mongoose.model('Review', reviewSchema);
+export default Review;

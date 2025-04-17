@@ -12,7 +12,7 @@ const generateToken = userId => {
     });
 };
 
-// register user controller
+// register user
 export const registerUser = async (req, res) => {
     try {
         const { name, email, password } = req.body;
@@ -44,7 +44,7 @@ export const registerUser = async (req, res) => {
     }
 };
 
-// login use controller
+// login use
 export const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -69,7 +69,7 @@ export const loginUser = async (req, res) => {
     }
 };
 
-// get user profile controller
+// get user profile
 export const getUserProfile = async (req, res) => {
     try {
         // req.user is already set by protect middleware
@@ -86,7 +86,7 @@ export const getUserProfile = async (req, res) => {
     }
 };
 
-// update user profile controller
+// update user profile
 export const updateUserProfile = async (req, res) => {
     try {
         //1. get user from db
@@ -127,7 +127,7 @@ export const updateUserProfile = async (req, res) => {
     }
 };
 
-// get all user controller - Admins only
+// get all user - Admins only
 export const getAllUsers = async (req, res) => {
     // 1. fetch all the user excluding their password
     // 2. return the json res
@@ -148,7 +148,7 @@ export const getAllUsers = async (req, res) => {
     }
 };
 
-// delete user controller -Admins only
+// delete user -Admins only
 export const deleteUser = async (req, res) => {
     // 1. find the user by using req.params.id
     // 2. if user exist delete it
