@@ -1,4 +1,8 @@
-todo.txt
+# Ignore whole folder by default
+.vscode/
+
+
+
 # Logs
 logs
 *.log
